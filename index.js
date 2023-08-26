@@ -28,6 +28,12 @@ connectDB();
 
 app.use(cookieParser())
 // app.use(cors({ origin: 'http://localhost:3000' , credentials: true}))
+app.use(cors({
+    origin: '*',
+    methods: "GET, POST, PATCH, DELETE, PUT",
+    credentials:true,
+    optionSuccessStatus:200,
+}))
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.json());
