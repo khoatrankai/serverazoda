@@ -27,7 +27,7 @@ const port = process.env.PORT ?? 3000
 connectDB();
 
 app.use(cookieParser())
-app.use(cors({ origin: 'http://localhost:3000' , credentials: true}))
+// app.use(cors({ origin: 'http://localhost:3000' , credentials: true}))
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(express.json());
